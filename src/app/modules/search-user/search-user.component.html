@@ -1,0 +1,16 @@
+<div class="container p-5">
+    <div class="d-flex justify-content-center ">
+        <mat-form-field class="w-full col-7">
+            <mat-label>Buscar usuario</mat-label>
+            <input #buscarusuario [(ngModel)]="nombreBuscar" matInput>
+        </mat-form-field>
+        <button mat-button (click)="buscar()"  class="buscar">Buscar</button>
+    </div>
+    <div>
+        <div *ngFor="let usuario of usuarios;">
+            <app-usuario [usuario]="usuario"> </app-usuario>
+            <hr >
+        </div>
+    </div>
+
+</div>

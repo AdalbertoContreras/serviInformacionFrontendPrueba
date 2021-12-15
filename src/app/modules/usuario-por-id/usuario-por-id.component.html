@@ -1,0 +1,43 @@
+<div *ngIf="usuario" class="p-3 card-users">
+    <div class="d-flex p-3 mb-2">
+        <img class="avatar" [src]="usuario.avatar_url">
+        <div class="ml-1">
+            <div >
+                <span class="bold">
+                    Id :
+                </span>
+                {{usuario.id}}
+            </div>
+            <div>
+                <span class="bold">
+                    Nombre :
+                </span>
+                {{usuario.login}}
+            </div>
+        </div>
+    </div>
+    <div>
+        <span class="bold">
+            Repositorios publicados :
+        </span>
+        {{usuario.public_repos}}
+    </div>
+    <div>
+        <span class="bold">
+            Gits publicados :
+        </span>
+        {{usuario.public_gists}}
+    </div>
+    <div>
+        <span class="bold">
+            Seguidores :
+        </span>
+        {{usuario.followers}}
+    </div>
+    <div>
+        <span class="bold">
+            Siguiendo :
+        </span>
+        {{usuario.following}}
+    </div>
+</div>
