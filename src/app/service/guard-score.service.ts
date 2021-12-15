@@ -28,7 +28,7 @@ export class GuardScoreService {
   check(): boolean{
     var data: Usuario = JSON.parse(localStorage.getItem('usuario'));
     console.log(data);
-    return data && data.score == 1;
+    return data && data.score >= 30;
   }
 
 }
